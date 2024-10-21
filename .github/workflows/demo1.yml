@@ -18,10 +18,10 @@ jobs:
       uses: actions/checkout@v2
 
     # Step 2: Set up JDK
-    - name: Set up JDK 11
+    - name: Set up JDK 17
       uses: actions/setup-java@v1
       with:
-        java-version: '11'
+        java-version: '17'
 
     # Step 3: Cache Maven dependencies
     - name: Cache Maven packages
@@ -41,8 +41,8 @@ jobs:
       run: mvn test
 
     # Step 6: Archive test results (JUnit XML reports)
-    - name: Archive test results
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: target/surefire-reports/
+    #- name: Archive test results
+     # uses: actions/upload-artifact@v2
+     # with:
+       # name: test-results
+        #path: target/surefire-reports/
